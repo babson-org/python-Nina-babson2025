@@ -1,18 +1,14 @@
 
 #1 print 'hello' 5 times using an arithmetic operator
-
-
+print("hello "*5)
 
 #2 print 'hello' 5 times using a loop
-
-
-
+for i in range(0, 5):
+  print("hello "*5)
 
 #3 print 'hello' 5 times on the same line using a loop
-
-
-
-
+for i in range(0, 5):
+  print("hello "*5)
 
 #4  using nested loops print the following:
 '''
@@ -21,15 +17,24 @@
 20 21 22
 
 '''
+for row in range(3):
+    for col in range(3):
+        print(str(row)+str(col), end = " ")
+    print() #prints col
+print() #prints row
 
 #5 define txt and input some text from the keyboard into it
+def txt():
+   print("good morning")
+print(txt())
 
+#6 print each letter in txt
+def txt():
+   print("good morning")
+print(txt())
 
-
-
-
-#6 print each letter in txt 
-
+for letter in txt():
+  print(letter)
 
 
 

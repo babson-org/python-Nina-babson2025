@@ -5,8 +5,19 @@ from classes.week00.second_class.utils import clear_screen
 Write down the steps a program would need to make a cup of tea. Then implement a Python 
 function make_tea() that prints each step.
 '''
-# enter your code here
+def make_tea():
+    steps = ["1.Boil water",
+             "2.Place tea a mug",
+             "3.Pour water into mug",
+             "4.Let tea sit in water for two minutes",
+             "5.Remove tea bag",
+             "6.Add personalized extras if desired and enjoy"
+    ]
 
+for step in steps:
+    print(step)
+
+make_tea()
 
 pause=input('pause')
 clear_screen()
@@ -16,8 +27,7 @@ clear_screen()
 Given a list [2, 4, 6, 8, 10], write a program that prints the next three numbers in the list.  
 (the ones after 10)
 '''
-# enter your code here
-
+#what function do I use to enter in a pattern? "list1 is counting by 2s, enter the next three numbers"
 
 pause=input('pause')
 clear_screen()
@@ -27,7 +37,13 @@ clear_screen()
 Write a program that asks the user for their first and last name, then prints a greeting:
 "Hello, <first name> <last name>!"
 '''
-# enter your code here
+def greet_user():
+    first_name = input("Enter your first name: ")
+    last_name = input("Enter your last name: ")
+    print(f"Hi {first_name} {last_name}")
+
+greet_user()
+
 
 
 pause=input('pause')
