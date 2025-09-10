@@ -1,8 +1,0 @@
-#Master sheet of questions for prof#
-#September 9 questions
-#1. When defining a function what is the difference between using return and print?
-def txt():
-    #return or print ("good morning")
-
-#2. f-strings???
-#how do i enter in a pattern?

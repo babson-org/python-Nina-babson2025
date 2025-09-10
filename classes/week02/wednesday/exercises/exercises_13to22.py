@@ -5,6 +5,18 @@ from classes.week00.second_class.utils import clear_screen
 Ask the user for a number and print whether it is positive, negative, or zero.
 '''
 txt = "please enter a number: "
+while True:
+    try:
+        num = int(input(txt))
+        i = 1
+        while i < 6:
+            print(i)
+    except ValueError:
+        txt = "a number: "
+        
+'''
+#MY CODE
+txt = "please enter a number: "
 x = int(input(txt))
 if x > 0:
     print("number is positive")
@@ -12,7 +24,7 @@ elif x < 0:
     print("number is negative")
 else:
     print("number is zero")
-
+'''
 
 pause=input('pause')
 clear_screen()
@@ -21,6 +33,7 @@ clear_screen()
 #14 - Even/Odd Check
 Ask the user for a number and print if it is even or odd.
 '''
+
 txt = "input a number: "
 x = int(input(txt))
 if x % 2 == 0:
