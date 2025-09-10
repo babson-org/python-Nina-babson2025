@@ -64,6 +64,9 @@ import pprint
 #print.(type(sys.version))
 #See what type sys is -> string
 
+#pprint.pprint(dir(sys))
+print(type(sys.version))
+print(sys.version, sys.platform)
 
 pause=input('pause')
 clear_screen()
@@ -129,7 +132,10 @@ print(x)
 x = 2**3**2 # = 512 NOT 64
 print(x)
 
+print(x)
 
+x = 2**3**2
+print(x)
 pause=input('pause')
 clear_screen()
 '''
