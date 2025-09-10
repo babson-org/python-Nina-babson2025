@@ -14,7 +14,8 @@ while True:
     except ValueError:
         txt = "a number: "
         
-'''
+
+
 #MY CODE
 txt = "please enter a number: "
 x = int(input(txt))
@@ -24,7 +25,7 @@ elif x < 0:
     print("number is negative")
 else:
     print("number is zero")
-'''
+
 
 pause=input('pause')
 clear_screen()
