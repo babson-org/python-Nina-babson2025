@@ -8,15 +8,17 @@ txt = "please enter a number: "
 while True:
     try:
         num = int(input(txt))
-        i = 1
-        while i < 6:
-            print(i)
+        
+        break
     except ValueError:
         txt = "a number: "
-        
+
+i = 1
+while i < num:
+   print(i)
+   i += 1
 
 
-#MY CODE
 txt = "please enter a number: "
 x = int(input(txt))
 if x > 0:
