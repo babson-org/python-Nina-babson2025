@@ -1,20 +1,31 @@
-text = input("Enter a message you want to encrypt:")
-alphabet = []
-for idx in range(97, 97+26):
-    alphabet.append(chr(idx))   #append adds stuff to the end of the list
-print(alphabet)
+while True:
+    try:
+        height = int(input("Enter an odd number: "))
+        if height % 2 == 1: 
+            break
+        else:
+            print("The number must be odd. Try again: ")
+    except ValueError:
+            print("Refer to directions, please try again")
 
-### Create shifted alphabet where user enters shift ###
-shift = int(input("Enter shift:"))
+### Top half of diamond ###
+# Define middle of diamond parameters in terms of height #
+middle = height//2  # // divides diamond laterally
 
-#check that 0 < int < 26 --> 26 shifts alphabet all the way back to square 1
-shifted_alphabet = [None] * 26
-
-result = ""
-for char in text:
-    for char in alphabet:
-        idx = alphabet.index(char)
-        new_idx = (idx-shift)%26
-        result += shifted_alphabet[new_idx]
+# Setting spacing before and between stars - middle+1 makes sure formatting is mirrored longitudinally#
+for idx in range (middle, -1, -1):
+    before = " "*idx
+    between = " " * ((middle-idx)*2-1)
+    if (middle-idx)*2-1 == -1:
+        print(before+"*")
     else:
-        encrypt += char
+        print(before + "*" + between + "*")
+
+### Bottom half of code ###
+for idx in range (1, middle+1):
+    before = " " * idx
+    between = " " * ((middle-idx)*2-1)
+    if (middle-idx)*2-1 == -1:
+        print(before+"*")
+    else:
+        print(before + "*" + between + "*")

@@ -38,13 +38,12 @@ def draw_diamond():
     # TODO: Draw the top half of the diamond
 
     # TODO: Draw the bottom half of the diamond
-# Uncomment to test Part 1
+
 # ============MY COMPUTATIONAL THINKING ======================
-### Ensure user inputs an odd number ###
-# 
-
-
-
+# Break up diamond into _ and * --> drew out lines on paper
+# Ensure user inputs an odd number
+# Break up diamond into top half and lower half
+# Set spacing so * make diamond shape
 
 # =============== MY CODE ===========================
 # draw_diamond()
@@ -61,22 +60,22 @@ while True:
 
 ### Top half of diamond ###
 # Define middle of diamond parameters in terms of height #
-middle = height//2
+middle = height//2  # // divides diamond laterally
 
 # Setting spacing before and between stars - middle+1 makes sure formatting is mirrored longitudinally#
 for idx in range (middle, -1, -1):
     before = " "*idx
     between = " " * ((middle-idx)*2-1)
-    if (middle-idx*2-1 == -1):
+    if (middle-idx)*2-1 == -1:
         print(before+"*")
     else:
         print(before + "*" + between + "*")
 
 ### Bottom half of code ###
-for idx in range (1, middle+1 ):
+for idx in range (1, middle+1):
     before = " " * idx
     between = " " * ((middle-idx)*2-1)
-    if (middle-idx*2-1 == -1):
+    if (middle-idx)*2-1 == -1:
         print(before+"*")
     else:
         print(before + "*" + between + "*")
@@ -84,9 +83,6 @@ for idx in range (1, middle+1 ):
 # ==============================
 # Part 2: Count Letters, Words, and Sentences
 # ==============================
-### Type out actual steps of what im gonna do, what functions, any exceptions, etc ###
-
-def text_analysis():
     """
     Ask the user for a block of text.
     Count and display:
@@ -100,7 +96,6 @@ def text_analysis():
     text = input("Enter some text: ")
 
     # TODO: Count letters
-    letters = 0
 
     # TODO: Count words
 
@@ -110,11 +105,10 @@ def text_analysis():
     print(f"Letters: {letters}")
     print(f"Words: {0}")        # replace 0
     print(f"Sentences: {0}")    # replace 0
-# Uncomment to test Part 2
-# text_analysis()
+
 # ============MY COMPUTATIONAL THINKING ======================
-
-
+# Define starting value for letters, words, and sentences
+#
 
 
 
@@ -124,12 +118,20 @@ letters = 0
 words = 1
 sentences = 0
 
-### txt = "nina actually enter text and test" ###
-txt = input("enter text").strip()
+### Code to count letters, words, and sentences ###
+txt = input("Please enter complete text from beginning of a sentence to end - include punctuation: ").strip()
 for char in txt:
-    if char.isalpha(): letters += 1
-    elif char == " ": words += 1
-    elif char in (".", "!", "?"): sentences += 1
+    if char.isalpha():
+        letters += 1
+    elif char == " ":
+        words += 1
+    elif char in (".", "!", "?"): #User must include punctuation otherwise sentence count won't recognize
+        sentences += 1
+        
+print("Here is your text analysis:")
+print("letters:", letters)
+print("words:", words)
+print("sentences:", sentences)
 
 # ==============================
 # Part 3: Caesar Cipher – Encrypt and Decrypt
@@ -167,28 +169,24 @@ def caesar_cipher():
 
 # ================= MY CODE =============================
 ### Create an array called alpha that has whole lowercase alphabet --> always shifting left ###
-text = input("Enter a message you want to encrypt:")
+text = input("Enter a message you want to encrypt:").lower() #inital alphabet is all lowercase so making sure user input stays lowercase
 alphabet = []
 for idx in range(97, 97+26):
     alphabet.append(chr(idx))   #append adds stuff to the end of the list
-print(alphabet)
+print("alphabet", alphabet)
 
-### Create shifted alphabet where user enters shift ###
-shift = int(input("Enter shift:"))
-
-#check that 0 < int < 26 --> 26 shifts alphabet all the way back to square 1
-shifted_alphabet = [None] * 26
-
+### Create shifted alphabet where user enters shift - 26 would shift it all the way back to the original ###
+shift = int(input("Enter shift number between 1 and 26: "))
+if shift < 1 or shift > 26:
+    print("Please enter number from 1-26")
+    exit()
 result = ""
+
 for char in text:
-    for char in alphabet:
+    if char in alphabet:
         idx = alphabet.index(char)
-        new_idx = (idx-shift)%26
-        result += shifted_alphabet[new_idx]
+        new_index = (idx+shift)%26
+        result += alphabet[new_index] #combines alphabet and new index to get result for encryption
     else:
-        encrypt += char
-
-
-
-if __name__ == "__main__":
-    main()
+        result += char
+print("Encrypted message: ", result) #delivers final shifted/encrypted message
