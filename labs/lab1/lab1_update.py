@@ -46,7 +46,7 @@ def draw_diamond():
 # Set spacing so * make diamond shape
 # Code bottom half and code top half
 
-# =============== MY CODE ===========================
+# =================== MY CODE ===========================
 ### Ensure user inputs an odd number and define height ###
 while True:
     try:

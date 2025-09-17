@@ -10,3 +10,12 @@ Also, please prepare three questions you have on Python Notes Part 1 or Part 2 (
 -> week03/
 
 '''
+# Tic Toe Lab 2 Questions
+# 1: Is defining new variables the best method? -- easier/more efficient way?
+# 2: Why do we .py?
+
+# PDF Questions
+# 1: instead of writing out the list with the function, can i just input list1
+    # [1,2,3].append(4) OR List1.append(4)
+# 2: under strings, explain .count(sub)
+# 3: what do we use .isalnum() and .isalpha() for?
