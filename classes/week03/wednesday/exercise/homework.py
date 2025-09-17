@@ -19,3 +19,15 @@ Also, please prepare three questions you have on Python Notes Part 1 or Part 2 (
     # [1,2,3].append(4) OR List1.append(4)
 # 2: under strings, explain .count(sub)
 # 3: what do we use .isalnum() and .isalpha() for?
+
+# Creating your own functions
+x = 5
+print(id(x))
+def myFunc(z):
+    print(id(z))
+    z += 1
+    print(id(z))
+    return z
+
+y = myFunc(x)
+print(id(y))
