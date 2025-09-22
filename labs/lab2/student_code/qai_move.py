@@ -10,6 +10,15 @@ def ai_move(board: list[int]):
         so in this case your function should return 2
     """
     # TODO: Loop through board
+    # Create board and identify who is player and computer
+    # Make sure computer knows how to react to player input - how does computer know need three in a row
+
     # TODO: Find the first index where abs(cell) != 10
+    # Loop to correlate user input to grid
+
     # TODO: Return that index as the AI's move
+    # Where is computer putting next move
+    # Print computer output, "Your turn"
+    # Have outputs correlate to grid (make sure x/o changing on grid)
+    
     pass
