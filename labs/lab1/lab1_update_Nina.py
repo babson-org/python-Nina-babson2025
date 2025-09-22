@@ -1,3 +1,13 @@
+'''
+Nina, you seem to be a little confused about indentation and the use of functions.
+Your computational thinking on the diamond ois good but you don't really describe
+what you found when you drew the diamond on paper.  Caser cipher encrypts but
+doesn't decrypt.
+
+GRade B+
+
+'''
+
 # ==============================
 # Main Program
 # ==============================
