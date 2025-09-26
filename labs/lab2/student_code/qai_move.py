@@ -12,6 +12,13 @@ def ai_move(board: list[int]):
     # TODO: Loop through board
     # Create board and identify who is player and computer
     # Make sure computer knows how to react to player input - how does computer know need three in a row
+board = [str(i) for i in range(1, 10)]
+def create_board(board):
+        print(f"{board[0]} | {board[1]} | {board[2]}")
+        print(f"{board[3]} | {board[4]} | {board[5]}")
+        print(f"{board[6]} | {board[7]} | {board[8]}")
+
+create_board(board)
 
     # TODO: Find the first index where abs(cell) != 10
     # Loop to correlate user input to grid
