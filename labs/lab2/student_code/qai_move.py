@@ -9,23 +9,43 @@ def ai_move(board: list[int]):
         
         so in this case your function should return 2
     """
-    # TODO: Loop through board
-    # Create board and identify who is player and computer
-    # Make sure computer knows how to react to player input - how does computer know need three in a row
-board = [str(i) for i in range(1, 10)]
+
+
+# TODO: Loop through board
+# Create board and identify who is player and computer
+# Make sure computer knows how to react to player input - how does computer know need three in a row
+
+# Create a board labeled 1–9
+board = [str(i) for i in range(9)]
+"X" == 10
+"O" == -10
+score = {'player': 10, 'ai': -10}  # defualt human goes first
+
+# Function to print the board
 def create_board(board):
-        print(f"{board[0]} | {board[1]} | {board[2]}")
-        print(f"{board[3]} | {board[4]} | {board[5]}")
-        print(f"{board[6]} | {board[7]} | {board[8]}")
+    print(f"{board[0]} | {board[1]} | {board[2]}")
+    print("--+---+--")
+    print(f"{board[3]} | {board[4]} | {board[5]}")
+    print("--+---+--")
+    print(f"{board[6]} | {board[7]} | {board[8]}")
 
+for idx in range(9):
+    if abs(board[idx]) != 10: return idx
+
+# Call the function
 create_board(board)
+ai_name = 'Big Mean Machine'
+player_name = input('Please enter your name: ')
 
-    # TODO: Find the first index where abs(cell) != 10
-    # Loop to correlate user input to grid
+print(input("Please select either X or O"))
 
-    # TODO: Return that index as the AI's move
-    # Where is computer putting next move
-    # Print computer output, "Your turn"
-    # Have outputs correlate to grid (make sure x/o changing on grid)
-    
-    pass
+
+# TODO: Find the first index where abs(cell) != 10
+# Loop to correlate user input to grid
+import sys
+sys.stdout.flush()
+
+
+# TODO: Return that index as the AI's move
+# Where is computer putting next move
+# Print computer output, "Your turn" # Have outputs correlate to grid (make sure x/o changing on grid)

@@ -121,7 +121,7 @@ def draw_diamond():
 # ============MY COMPUTATIONAL THINKING ======================
 # Define starting value for letters, words, and sentences *words starts at one and sentences must include punctuation
 # Code to count the amount of letters, words, and sentences
-# Use a if, elif, elif stmt in a for loop for each item
+# Use a if, elif, else stmt in a for loop for each item
 # Print each item
 def text_analysis():
     # ====================== MY CODE =============================
