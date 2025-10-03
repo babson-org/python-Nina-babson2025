@@ -14,7 +14,6 @@ def ai_move(board: list[int]):
 # TODO: Loop through board
 # Create board and identify who is player and computer
 # Make sure computer knows how to react to player input - how does computer know need three in a row
-
 # Create a board labeled 1–9
 board = [str(i) for i in range(9)]
 "X" == 10
@@ -30,7 +29,8 @@ def create_board(board):
     print(f"{board[6]} | {board[7]} | {board[8]}")
 
 for idx in range(9):
-    if abs(board[idx]) != 10: return idx
+    if abs(board[idx]) != 10:
+        print(idx)
 
 # Call the function
 create_board(board)
@@ -39,13 +39,29 @@ player_name = input('Please enter your name: ')
 
 print(input("Please select either X or O"))
 
+# Code the default number that the computer will use to be "X" or "O"
+symbol = []
+for cell in board:
+    if cell == 10:
+        symbol.append("X")
+    elif cell == -10:
+        symbol.append("O")
+    else:
+        symbol.append(str(cell))
 
 # TODO: Find the first index where abs(cell) != 10
 # Loop to correlate user input to grid
+# Imports are for prof code
 import sys
 sys.stdout.flush()
 
-
+# Provides list of available spaces to choose from
 # TODO: Return that index as the AI's move
 # Where is computer putting next move
 # Print computer output, "Your turn" # Have outputs correlate to grid (make sure x/o changing on grid)
+def available_moves(board: list[int]):
+    list[int]
+
+for idx in board, cell in enumerate(board):
+    if abs(cell) != 10:
+return None
