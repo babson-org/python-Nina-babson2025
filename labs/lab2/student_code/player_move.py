@@ -18,9 +18,11 @@ def player_move(board: list[int], score: dict[str, int]):
             if abs(board[move]) == 10:
                 prompt = "That spot has already been selected, try again - Select a number 1-9"
                 continue
+
             # TODO: Assign score['player'] to the selected cell on the board
             board[move] = score["player"]
             break
+        
         except ValueError:
             prompt = "Invalid input. Try again (1-9): "
 
