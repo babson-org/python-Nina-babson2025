@@ -1,4 +1,6 @@
-    
+# Player inputs their choice
+# Choice is reflected on the board (replaced instead of the cell number)
+
 def player_move(board: list[int], score: dict[str, int]):
     """
         Prompts the player to choose a valid move.

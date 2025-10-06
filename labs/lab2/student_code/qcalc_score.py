@@ -1,3 +1,4 @@
+# calc_score used to see if a player has won or not (have their moves equated +or-10)
 def calc_score(board: list[int]):
     """
         Determines if there's a winner on the board.
