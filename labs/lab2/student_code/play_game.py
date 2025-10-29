@@ -77,7 +77,7 @@ def play_game():
 
     # Tracks whose turn it is. True = player's turn, False = AI's turn.
     playerTurn = True  # default
-    
+
     # Initialize an empty board: numbers 1-9 represent available spaces.
     board = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 

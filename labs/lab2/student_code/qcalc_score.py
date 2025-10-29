@@ -1,4 +1,3 @@
-# calc_score used to see if a player has won or not (have their moves equated +or-10)
 def calc_score(board: list[int]):
     """
         Determines if there's a winner on the board.
@@ -9,11 +8,19 @@ def calc_score(board: list[int]):
         if they add upto -30 return -30
         else return 0
     """
-    if abs(board[0]+board[1]+board[2]) == 10: return board[0]+board[1]+board[2]
-    elif abs(board[3]+board[4]+board[5]) == 10: return board[3]+board[4]+board[5]
-    elif abs(board[6]+board[7]+board[8]) == 10: return board[6]+board[7]+board[8]
-    elif abs(board[3]+board[3]+board[6]) == 10: return board[0]+board[3]+board[6]
-    elif abs(board[1]+board[4]+board[7]) == 10: return board[1]+board[4]+board[7]
-    elif abs(board[2]+board[5]+board[8]) == 10: return board[2]+board[5]+board[8]
-    elif abs(board[0]+board[4]+board[8]) == 10: return board[0]+board[4]+board[8]
-    elif abs(board[2]+board[4]+board[6]) == 10: return board[2]+board[4]+board[6]
+     
+    def line_sum(a, b, c):
+        '''
+            line_sum takes 3 numbers and if the sum is either 30
+            or -30 returns that sum otherwise do not return
+        '''         
+         
+        # TODO: Sum the values at board[a], board[b], board[c] 
+        # TODO: Return 30 if X wins, -30 if O wins otherwise do not return
+        pass
+     
+    # TODO: For each of the 8 ways to win
+    # TODO: Check the cells in each row, column, or diagonal using line_sum
+    # TODO: Return 0 if line_sum() didn't return 30 or -30
+    pass
+
