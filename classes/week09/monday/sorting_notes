@@ -1,0 +1,15 @@
+#SORTING NOTES#
+
+#Bubble Sort
+def bubble_sort(values):
+    sorted = values.copy()
+    size = len(sorted)
+
+    for pass_num in range(size - 1):
+
+        for i in range(size-1):
+            if sorted[i] > sorted [i+1]:
+                sorted[i], sorted[i+1] = sorted[i+1], sorted[i]
+
+    return(sorted)
+ 
