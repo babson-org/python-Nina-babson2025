@@ -13,14 +13,14 @@ We register a MetaPathFinder that looks up modules (e.g., 'play_minesweep',
 them with SourcelessFileLoader. This bypasses the normal requirement to
 import through the package directory.
 """
-
+#Imports
 import os
 import sys
 import importlib.abc
 import importlib.machinery
 
 # --- Paths -------------------------------------------------------------------
-GAME_DIR = os.path.dirname(__file__)
+GAME_DIR = os.path.dirname(__file__) 
 PYC_DIR = os.path.join(GAME_DIR, "__pycache__")
 TAG = f"cpython-{sys.version_info.major}{sys.version_info.minor}"
 
