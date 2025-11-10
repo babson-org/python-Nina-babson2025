@@ -12,9 +12,7 @@ def print_board(board: list, level: int):
          (' ♦', '   '), (' ♦', '   '), (' ♦', '   ')],
     ]
     '''
-
     
-
     line_hash = '|-----'
 
     print('      ', end='')
