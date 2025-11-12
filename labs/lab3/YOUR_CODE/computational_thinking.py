@@ -1,55 +1,29 @@
 #COMPUTATIONAL THINKING#
+#Here is my thinking and breakdown of the puzzle
+
 #Initialize board (give board parameters - hard code lack of user error)
-    #user_board is user board (everything is diamond)
+    #player_board is user board (everything is diamond)
     #base_board is hidden mines board (everything is numbers or mines)
 
-#Computer chooses random mines
-    #Random numbers
-    #Count = 0
-    #while count > x, col = rand.randint(0,globalcols-1)
-    #print board
+#Computer randomly places mines
+    #mines.py containes funtions:
+    #place_random_mines which places mines randomly (if not already there) places mines in base_board
+    #check_cell checks if there is a mine present or not
 
 #User input coordinates for row and column
-    #pop? stack.pop?
-    #append coordinates to stack
-    #
+    #use chooses integer 1-5 for row and column
 
-#user input
+#Check mine
+    #check_cell checks if there is a mine already there
 
-#Imports
-#import globals
-#import utils
-#from initialize_board import initialize_board
-#from print_board import print_board
-#from game_over import game_over
-#from get_validated_input import get_validated_input
-#from is_bomb_at import is_bomb_at
-#from update_board import update_board
+#re-print player_board for player to see new board
 
-def get_validated_input(txt1, txt2, low_int, high_int):
-"""
-Prompt the user for an integer input within a specified range.
+#check if game is lost or won
+    #If the player chooses a cell with a mine, check_cell will see bomb and print "You Lost"
+    #If the player chooses an open cell, the game will continue
+    #If the player chooses all open cells (Hidden cells = # of mines) the game ends and prints "You Won"
 
-Continuously prompts the user using `txt1` until a valid integer within
-the range [`start`, `finish`] is entered. If the input is invalid,
-`txt2` is shown in subsequent prompts until valid input is received.
-
-Parameters:
-txt1 (str) : Initial prompt message for user input.
-txt2 (str) : Prompt message shown after invalid input.
-low_int (int) : Minimum acceptable value (inclusive).
-high_int (int): Maximum acceptable value (inclusive).
-
-Returns:
-int: A validated integer input from the user within the specified range.
-"""
-txt = txt1
-while True:
-    try:
-        value = int(input(txt))
-    if not (low_int <= value <= high_int): raise ValueError:
-    break
-except ValueError:
-txt = txt2
-
-return value
+#Questions for prof
+#Change rows and cols to all caps
+#fix the 3D board
+#ROWS and COLS underlined

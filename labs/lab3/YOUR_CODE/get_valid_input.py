@@ -2,7 +2,7 @@
 def get_valid_input(rows, cols):
     while True:
         try:
-            prompt = input("Enter row and column (a number 1-5)").split
+            user_input = input("Enter row and column (a number 1-5)").split
             r,c = map(int, user_input)
             if 0 <= r < rows and 0 <= c < cols:
                 return r,c
