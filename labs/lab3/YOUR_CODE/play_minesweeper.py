@@ -10,17 +10,17 @@ from game_over import game_won
 
 def play_minesweeper():
     print(" Welcome to the Minesweeper Game - Try tp uncover all the cells without digging up a mine. If you hit a mine, you lose! If you can uncover all the cells without hitting a mine, you win! Use the surrounding cells as hints...good luck.")
-    rows = int(input("Enter a number 1-5 for your rows: ")) #Choose Row
-    cols = int(input("Enter a number 1-5 for your columns: ")) #Choose Cols
+    ROWS = int(input("Enter a number 1-5 for your rows: ")) #Choose Row
+    COLS = int(input("Enter a number 1-5 for your columns: ")) #Choose Cols
     num_mines = int(input("Enter number of mines: "))
 
-    base_board = initialize_board(rows, cols) #Creates board with mines
+    base_board = initialize_board(ROWS, COLS) #Creates board with mines
     place_random_mines(base_board, num_mines)
-    player_board = initialize_board(rows, cols, fill= "+") #Hides mines for player board
+    player_board = initialize_board(ROWS, COLS, fill= "+") #Hides mines for player board
 
     while True:
         print_board(player_board)
-        r, c = get_valid_input(rows, cols)
+        r, c = get_valid_input(ROWS, COLS)
 
         hit_mine = update_board(base_board, player_board, r, c) #Game Lost
         if hit_mine:
