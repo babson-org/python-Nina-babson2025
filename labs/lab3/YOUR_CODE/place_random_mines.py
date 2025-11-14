@@ -13,7 +13,13 @@ def place_random_mines(board,num_mines):
     placed = 0
     while placed < num_mines:
         r = random.randint(0, ROWS-1)
-        c = random.randint (0, ROWS-1)
-        if board [r][c] != globals.MINE:
-            board [r][c] = globals.MINE
+        
+        c = random.randint (0, COLS-1)
+
+        
+        if board [r][c] == ():
+            board [r][c] = ('*', '+')
             placed += 1
+    
+    
+    return board

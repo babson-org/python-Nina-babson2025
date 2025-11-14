@@ -1,10 +1,10 @@
 #Ask user for valid inputs for row and cell
-def get_valid_input(rows, cols):
+def get_valid_input(ROWS, COLS):
     while True:
         try:
             user_input = input("Enter row and column (a number 1-5)").split
             r,c = map(int, user_input)
-            if 0 <= r < rows and 0 <= c < cols:
+            if 0 <= r < ROWS and 0 <= c < COLS:
                 return r,c
             else:
                 print("Coordinates out of range - try again")
@@ -12,4 +12,3 @@ def get_valid_input(rows, cols):
             print("Invalid input - please choose two integers between 1 and 5")
             
 
-        

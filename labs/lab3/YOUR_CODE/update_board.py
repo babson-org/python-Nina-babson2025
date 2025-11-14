@@ -5,12 +5,12 @@
 from globals import HIDDEN, BLANK, MINE
 from get_adjacent_cells import get_adjacent_cells
 
-def update_board(base_board, player_board, row, col):
-    if base_board[row][col] == MINE:
-        player_board[row][col] = MINE
+def update_board(base_board, player_board, ROWS, COLS):
+    if base_board[ROWS][COLS] == MINE:
+        player_board[ROWS][COLS] = MINE
         return True  # hit a mine
 
-    stack = [(row, col)]
+    stack = [(ROWS, COLS)]
     while stack:
         r, c = stack.pop()
         if player_board[r][c] != HIDDEN:

@@ -19,5 +19,5 @@ def game_won(base_board, player_board):
 #bool: True if the selected cell is a mine, otherwise False
 from globals import MINE
 
-def game_lost(base_board, row, col):
-    return base_board[row][col] == MINE
+def game_lost(base_board, ROW, COL):
+    return base_board[ROW][COL] == MINE
