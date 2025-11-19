@@ -17,6 +17,7 @@ def initialize_board():
 
 
     board = place_random_mines(board, 5)
+    
 
            
             
