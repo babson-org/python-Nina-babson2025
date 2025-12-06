@@ -12,4 +12,11 @@ def portfolio_view_last_close(self):
     the main program does the rest!
     
     """
+    # Gives me the symbols in the client's portfolio from the big dictionary of tickers
+    client_sym = [pos["sym"] for pos in self.positions]
     
+
+    # Use symbols to pull last close price
+    last_close = _prices.get_last_close_map(client_sym)
+    return last_close
+
