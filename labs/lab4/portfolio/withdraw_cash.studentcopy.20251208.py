@@ -5,6 +5,7 @@ def portfolio_withdraw_cash(self, amount: float):
     - Reject if amount > cash
     - Otherwise subtract from self.cash
     """
+    # GIVEN #
     if amount < 0:
         print("You can not withdraw negative ")
         time.sleep(1)
