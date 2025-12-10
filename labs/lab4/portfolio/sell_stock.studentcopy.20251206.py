@@ -41,6 +41,7 @@ def portfolio_sell_stock(self, sym: str, shares: float, price: float):
     cost_per_share = cur_pos["cost"] / cur_pos["share"]
     cost_reduction = cost_per_share * shares
     self.cash += shares*price
+    
     # If shares = 0, remove share
     if cur_pos["shares"] == 0:
         self.position.remove(cur_pos) #if position = 0, the symbol is also taken out of the client portfolio
