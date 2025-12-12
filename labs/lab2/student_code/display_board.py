@@ -22,7 +22,8 @@ def print_board(board: list[int]) -> None:
         if row < 2:
             print('-----------')
     print()
-    
+
+"""
 from utils import clear_screen
 def print_board(board: list[int]):
     """
@@ -66,3 +67,5 @@ def print_board(board: list[int]):
     #                  |   |   
     #                7 | 8 | X 
     #                  |   |   
+
+"""
